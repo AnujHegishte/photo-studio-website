@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+        <div class="container" data-aos="fade-up">
+  
+          <div class="section-title">
+            <h2>Contact</h2>
+            <p>For more enquiry contact us via phone, or drop an e-mail to the address mentioned below. We'll surely get back to you within a day.</p>
+          </div>
+  
+          <div class="row">
+  
+            <div class="col-lg-5 d-flex align-items-stretch">
+              <div class="info">
+                <div class="address">
+                    <i class="bi bi-geo-alt flex-shrink-0"></i>
+                  <h4>Location:</h4>
+                  <p>B-6 Galaxy-2 Dhuri Complex, Vasai, MH 401202</p>
+                </div>
+  
+                <div class="email">
+                    <i class="bi bi-envelope flex-shrink-0"></i>
+                  <h4>Email:</h4>
+                  <p>krystaldigital20@gmail.com</p>
+                </div>
+  
+                <div class="phone">
+                  <i class="bi bi-phone flex-shrink-0"></i>
+                  <h4>Call:</h4>
+                  <p>+91 727 6675 797</p>
+                </div>
+                <!--19.392560, 72.825810 -->
+                
+              </div>
+  
+            </div>
+
+            <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+                {{msg | safe}}
+            </div>
+  
+          </div>
+
+        </div>
+    </section><!-- End Contact Section -->
+
+{% endblock %}

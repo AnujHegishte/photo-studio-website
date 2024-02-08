@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<script>
+  function check(){
+    alert('Thank you for your feedback.');
+  }
+</script>
+
+<section id="about" class="about">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>Feedback</h2>
+        <p>Your feedback is valuable. It will surely help us to improve our 
+          services and provide good facilities to our customers.</p>
+      </div>
+
+    
+    {% load crispy_forms_tags %}
+    <center>
+    <div class="form-row">
+        <form method="post" class="uniForm" onsubmit="return check()">
+        {% csrf_token %}
+        <div class="form-group col-md-6 mb-0">
+          {{ fm.name|as_crispy_field }}
+        </div>
+        <br>
+        <div class="form-group col-md-6 mb-0">
+            {{ fm.feedback|as_crispy_field }}
+        </div>
+        <br>
+        <div class="form-group col-md-6 mb-0">
+            <input type="submit" value="Submit" class="btn btn-primary">				
+        </div>
+        </div>
+        </form>
+        {{fm_msg}}
+    </div>
+    </center>
+    </div>
+</section><!-- End Feedback Section -->
+
+{% endblock %}
